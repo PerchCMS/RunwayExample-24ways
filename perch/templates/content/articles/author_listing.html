@@ -1,0 +1,21 @@
+<perch:before>
+    <main class="main" role="main">
+        <section class="index">
+            <perch:content id="author_bio" encode="false" />
+            <section class="section" id="articles">
+                <header class="section_header">
+                    <h1 class="section_title">Articles by <perch:related id="author" collection="Authors"><perch:content id="firstname" /></perch:related></h1>
+                </header>
+                <div class="section_main">
+                    <ul class="list list-articles">
+</perch:before>
+                        <li class="list_item">
+                        	<perch:template path="partials/content/summary-article.html" />
+                        </li>
+<perch:after>
+                    </ul><!--/.list-articles-->
+                </div>
+            </section><!--/.section-->
+        </section><!--/.index-->
+    </main><!--/@main-->
+</perch:after>

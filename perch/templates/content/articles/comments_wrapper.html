@@ -1,0 +1,21 @@
+<main class="main" role="main">
+	<article class="article day-<perch:content id="date" type="date" format="d" />">
+		<header class="article_header">
+			<h1 class="article_title p-name">
+				<a href="/<perch:content id="date" type="date" format="Y" />/<perch:content id="slug" type="text" />/">
+					<perch:content id="title" type="text" />
+				</a>
+			</h1>
+			<perch:related id="author" collection="Authors">
+				<a class="article_byline" href="/authors/<perch:content id="slug" />/">
+					<span class="avatar"><img class="article_image u-photo" src="//cloud.24ways.org/authors/<perch:content id="slug" />280.jpg" width="160" height="160" alt="<perch:content id="firstname" /> <perch:content id="lastname" />" /></span>
+	                <span class="p-name"><perch:content id="firstname" /> <perch:content id="lastname" /></span>
+				</a>
+			</perch:related>
+		</header>
+
+		<!-- replaced with comments listing -->
+		<!-- replaced with comments form -->
+
+	</article><!--/.article-->
+</main><!--/@main-->

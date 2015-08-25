@@ -1,0 +1,107 @@
+<perch:content id="date" type="date" label="Day" required="true" order="6" format="j / Y" default="2014-12-30" suppress="true" />
+<perch:content id="excerpt" type="textarea" label="Excerpt" textile="true" html="true" suppress="true" order="3" size="m" />
+<perch:content id="impress" type="text" label="Impress with" size="xl"  suppress="true" order="99" />
+<perch:content id="category" type="dataselect" page="categories" region="Categories" options="name" values="slug" label="Sub-category" suppress="true" order="11" />
+
+
+    <main class="main" role="main">
+        <article class="article h-entry day-<perch:content id="date" type="date" format="d" />">
+            <header class="article_header">
+                <h1 class="article_title p-name"><perch:content id="title" type="text" label="Title" required="true" order="1" size="xl" title="true" /></h1>
+                <p class="article_byline p-author h-card">
+                <perch:related id="author" collection="Authors" label="Author" order="5">
+                    <a class="u-url" href="#author">
+                        <span class="avatar"><img class="article_image u-photo" src="//cloud.24ways.org/authors/<perch:content id="slug" />280.jpg" width="160" height="160" alt="<perch:content id="firstname" /> <perch:content id="lastname" />" /></span>
+                        <span class="p-name"><perch:content id="firstname" /> <perch:content id="lastname" /></span>
+                    </a>
+                </perch:related>
+                <p>
+            </header>
+
+            <footer class="article_footer">
+                <ul class="list">
+                    <li class="list_item"><time class="dt-published" datetime="<perch:content id="date" type="date" label="Day" required="true" order="6" format="c" />"><perch:content id="date" type="date" label="Day" required="true" order="6" format="j" /> Dec<span>ember</span> <perch:content id="date" type="date" format="Y" /></time></li>
+
+                    <perch:categories id="categories" set="topics" label="Topic" order="9">
+                        <perch:before><li class="list_item">Published in</perch:before>
+                            <a href="/topics/<perch:category id="catSlug" />/"><perch:category id="catTitle" /><perch:if exists="perch_item_last"><perch:else />, </perch:if></a>
+                        <perch:after></li></perch:after>
+                    </perch:categories>
+
+
+                    <li class="list_item"><a href="#comments"><!-- replaced with comment count --> <!-- replaced with comment word --></a></li>
+                </ul>
+            </footer>
+
+            <div class="article_main e-content">
+                <perch:if exists="deprecated">
+                    <perch:template path="partials/content/note.html" />
+                </perch:if>
+                <perch:content id="article" type="magictextarea" label="Article" textile="true" order="2" size="xxxl" html="true" class="lede" />
+            </div>
+
+            <section class="section" id="author">
+                <header class="section_header">
+                    <h1 class="section_title">About the author</h1>
+                </header>
+                <div class="section_main">
+                    <perch:related id="author" collection="Authors">
+                        <perch:content id="bio" html="true" />
+                        <p><a class="continue" href="/authors/<perch:content id="slug" />/" title="More information about <perch:content id="firstname" /> <perch:content id="lastname" />">More articles by <perch:content id="firstname" /></a></p>
+                    </perch:related>
+                </div>
+            </section><!--/.section-->
+
+
+
+            <perch:content id="sponsor" type="select" label="Sponsor" options="Perch Runway|perchrunway,Perch|perch,HelpSpot|helpspot,GatherContent|gathercontent,Wildbit A|wildbit,Wildbit B|wildbitb,Shopify|shopify,Treehouse|treehouse" suppress="true" />
+
+            <perch:if exists="sponsor">
+            <section class="section section-sponsor" id="sponsor">
+                <header class="section_header">
+                    <h1 class="section_title">Brought to you by</h1>
+                </header>
+                <div class="section_main">
+                    <perch:if id="sponsor" value="perch">
+                        <perch:template path="partials/content/promo.perch.html" />
+                    </perch:if>
+                    <perch:if id="sponsor" value="perchrunway">
+                        <perch:template path="partials/content/promo.perchrunway.html" />
+                    </perch:if>
+                    <perch:if id="sponsor" value="shopify">
+                        <perch:template path="partials/content/promo.shopify.html" />
+                    </perch:if>
+                    <perch:if id="sponsor" value="treehouse">
+                        <perch:template path="partials/content/promo.treehouse.html" />
+                    </perch:if>
+                    <perch:if id="sponsor" value="gathercontent">
+                        <perch:template path="partials/content/promo.gathercontent.html" />
+                    </perch:if>
+                    <perch:if id="sponsor" value="helpspot">
+                        <perch:template path="partials/content/promo.helpspot.html" />
+                    </perch:if>
+                    <perch:if id="sponsor" value="wildbit">
+                        <perch:template path="partials/content/promo.wildbit.html" />
+                    </perch:if>
+                    <perch:if id="sponsor" value="wildbitb">
+                        <perch:template path="partials/content/promo.wildbitb.html" />
+                    </perch:if>
+
+                </div>
+            </section><!--/.section-->
+            </perch:if>
+
+            <section class="section" id="comments">
+                <header class="section_header">
+                    <h1 class="section_title">Comments</h1>
+                </header>
+                <div class="section_main">
+                    <p><a class="continue" href="/<perch:content id="year" type="hidden" />/<perch:content id="slug" type="slug" label="URL" size="xl" for="title" editable="true" />/comments/" data-replace data-interaction data-target="#comments"><!-- replaced with comment message --></a></p>
+                </div>
+            </section><!--/.section-->
+
+            <!-- replaced with related articles -->
+
+
+        </article><!--/.article-->
+    </main><!--/@main-->

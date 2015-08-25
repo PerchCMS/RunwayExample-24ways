@@ -1,0 +1,23 @@
+<perch:before>
+<section class="section" id="comments">
+	<header class="section_header">
+		<h1 class="section_title"><!-- replaced with comment count --> Comments</h1>
+	</header>
+	<div class="section_main">
+		<p>Comments are ordered by helpfulness, as indicated by you. Help us pick out the gems and discourage asshattery by voting on notable comments.</p>
+		<p>Got something to add? You can leave a comment below.</p>
+
+		<ol class="list list-comments">
+</perch:before>
+
+		<perch:if id="commentScore" match="lte" value="-3">
+			<perch:template path="partials/content/summary-comment-unhelpful.html" />
+		<perch:else />
+			<perch:template path="partials/content/summary-comment-helpful.html" />
+		</perch:if>
+
+<perch:after>
+		</ol>
+	</div>
+</section>
+</perch:after>

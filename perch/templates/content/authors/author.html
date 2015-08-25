@@ -1,0 +1,15 @@
+<header class="preface h-card">
+    <h1 class="preface_title p-name"><perch:content id="firstname" label="First name" type="text" order="1" required="true" title="true" /> <perch:content id="lastname" label="Last name" type="text" order="2" required="true" title="true" /></h1>
+    <div class="preface_main">
+        <div class="lede p-note">
+            <span class="avatar"><img class="preface_image u-photo" src="//cloud.24ways.org/authors/<perch:content id="slug" />280.jpg" width="280" height="280" alt="<perch:content id="firstname" /> <perch:content id="lastname" />"/></span>
+            <perch:content id="bio" type="textarea" label="Bio" textile="true" order="4" html="true" />
+        </div>
+    </div>
+</header><!--/.preface-->
+
+
+<perch:content id="slug" type="text" label="Slug" order="3" required="true" help="Should be firstnamelastname" suppress="true" />
+<perch:content id="url" type="url" label="URL" suppress="true" order="5" placeholder="http://" />
+<perch:content id="active" type="date" value="2005-12-01" label="Active" suppress="true" order="6" />
+<perch:content id="twitter" type="text" label="Twitter username" suppress="true" order="7" />

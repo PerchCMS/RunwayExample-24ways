@@ -1,0 +1,38 @@
+<perch:form id="subscribe" app="perch_mailchimp" double-optin="true" send-welcome="false">
+<fieldset class="section" id="subscribe">
+	<legend class="section_header">
+		<span class="section_title">Subscribe</span>
+	</legend>
+	<div class="section_main">
+			<p class="field">
+				<perch:label for="email" class="field_label label">Email</perch:label>
+				<perch:input class="field_input input" id="email" required="true" type="email" mailer="email" placeholder="you@example.com" />
+				<perch:error type="required" for="email">Required</perch:error>
+			</p>
+			<p class="field-buttons">
+				<perch:input type="submit" value="Subscribe" id="btnsubmit" class="button button-submit" />
+				<perch:input type="hidden" value="1" id="confirm" mailer="confirm_subscribe" />
+			</p>	
+	</div>
+</fieldset><!--/.section-->
+
+
+<perch:success>
+	<section class="section" id="subscribe">
+		<header class="section_header">
+			<h1 class="section_title">Subscribe</h1>
+		</header>
+		<div class="section_main">
+			<p>Thank you. You'll be asked to confirm your email address, and you can unsubscribe at any time.</p>
+		</div>
+	</section><!--/.section-->
+</perch:success>
+
+</perch:form>
+
+
+
+
+
+
+

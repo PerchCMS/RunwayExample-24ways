@@ -1,0 +1,19 @@
+<perch:before>
+<main class="main" role="main">
+    <section class="index">
+        <header class="preface">
+            <h1 class="preface_title" data-icon="&#x<perch:content id="unicode_char" />;"><perch:content id="topic_name" /></h1>
+            <div class="preface_main">
+                <p class="lede"><perch:content id="topic_blurb" type="textarea" html="true" /></p>
+            </div>
+        </header><!--/.preface-->
+        <ol class="list list-articles">
+</perch:before>
+	        <li class="list_item">
+				<perch:template path="partials/content/summary-article.html" />
+   	        </li>
+<perch:after>
+        </ol><!--/.list-articles-->
+    </section>
+</main><!--/@main-->
+</perch:after>

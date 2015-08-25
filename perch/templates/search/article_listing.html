@@ -1,0 +1,54 @@
+<perch:before>
+    <main class="main" role="main">
+        <section class="index">
+            <header class="preface">
+                <h1 class="preface_title">Search results for &#8220;<perch:search id="key" />&#8221;</h1>
+            </header><!--/.preface-->
+
+            <ol class="list list-articles">
+</perch:before>
+                <li class="list_item">           
+                    <article class="summary summary-article h-entry day-<perch:search id="date" format="d" />">
+                        <header class="summary_header">
+                            <h1 class="summary_title p-name">
+                                <a class="u-url" rel="bookmark" href="/<perch:search id="date" format="Y" />/<perch:search id="slug" />/"><perch:search id="title" /></a>
+                            </h1>
+                            <p class="summary_meta">
+                                <time class="dt-published" datetime="<perch:search id="date" format="c" />"><perch:search id="date" format="j F Y" /></time>
+                            </p>
+                        </header>
+                        <div class="summary_main">
+                            <perch:search id="excerpt" type="textarea" label="Excerpt" textile="true" />
+                        </div>
+                        <footer class="summary_footer">
+                            <p class="summary_author p-author h-card">
+                                <perch:related id="author" collection="Authors">
+                                    <a class="u-url" href="/authors/<perch:search id=slug" />/"><img class="u-photo" src="//cloud.24ways.org/authors/<perch:search id="slug" />160.jpg" alt="" /><span class="p-name"><perch:search id="firstname" /> <perch:search id="lastname" /></span></a>
+                                </perch:related>
+                            </p>
+                        </footer>
+                    </article>
+                </li>
+<perch:after>
+            </ol><!--/.list-articles-->
+            <perch:template path="partials/forms/button-more.html" />
+        </section><!--/.index-->
+    </main><!--/@main-->
+</perch:after>
+
+
+<perch:noresults>
+    <main class="main" role="main">
+        <section class="index">
+            <header class="preface">
+                <h1 class="preface_title">
+                    <perch:if exists="key">
+                        No results for &#8220;<perch:search id="key" />&#8221;</h1>
+                    <perch:else />
+                        No results
+                    </perch:if>
+            </header><!--/.preface-->
+
+        </section><!--/.index-->
+</main><!--/@main-->
+</perch:noresults>

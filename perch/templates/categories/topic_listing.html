@@ -1,0 +1,22 @@
+<perch:before>
+    <main class="main" role="main">
+        <section class="index">
+            <header class="preface">
+                <h1 class="preface_title">Topics</h1>
+            </header><!--/.preface-->
+</perch:before>
+            <section class="section section-topic" id="<perch:category id="catSlug" type="slug" />">
+                <header class="section_header">
+                    <h1 class="section_title"><a href="/topics/<perch:category id="catSlug" type="slug" />/"><perch:category id="catTitle" type="text" /></a></h1>
+                    <!-- <p class="section_meta">45 articles</p> -->
+                </header>
+                <div class="section_main">
+                    <p data-icon="&#x<perch:category id="unicode_char" type="text" />;">
+                    	<perch:category id="blurb" type="textarea" />
+                	</p>
+                </div>
+            </section><!--/.section-topic-->
+<perch:after>
+        </section><!--/.index-->
+    </main><!--/@main-->
+</perch:after>

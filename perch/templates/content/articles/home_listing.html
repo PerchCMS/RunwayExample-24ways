@@ -1,0 +1,22 @@
+<perch:before>
+<main class="main" role="main">
+    <section class="index">
+        <header class="preface">
+            <h1 class="preface_title"><perch:content id="date" format="Y" /></h1>
+            <div class="preface_main">
+                <perch:content id="about" type="textarea" html="true" />
+             </div>
+        </header><!--/.preface-->
+
+        <ol class="list list-articles list-articles-countdown">
+</perch:before>
+
+	        <li class="list_item">
+				<perch:template path="partials/content/summary-article.html" />
+	        </li>
+
+<perch:after>
+        </ol><!--/.list-articles-->
+    </section>
+</main><!--/@main-->
+</perch:after>

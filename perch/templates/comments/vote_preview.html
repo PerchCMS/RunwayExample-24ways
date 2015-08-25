@@ -1,0 +1,25 @@
+<section class="section" id="comments">
+	<header class="section_header">
+		<h1 class="section_title">Vote <perch:comments id="votetype" />?</h1>
+	</header>
+	<div class="section_main">
+		<ol class="list list-comments">
+			<perch:template path="partials/content/summary-comment-helpful.html" />
+		</ol>
+
+		<perch:form id="vote" method="post" app="perch_comments" action="/vote/<perch:comments id="votetype" />/c<perch:comments id="commentID" />/">
+			<div class="comments-wrapper vote">
+				<p class="buttonbar">
+					<perch:input type="hidden" id="commentID" value="<perch:comments id="commentID" />" />
+					<perch:input type="hidden" id="vote" value="<perch:comments id="votetype" />" />
+					<perch:input type="hidden" id="cookie" value="24wv" />
+					<perch:input type="hidden" id="cookie_path" value="/vote/" />
+					<perch:input type="submit" id="submitComment" value="Vote" class="button" />
+				</p><!-- buttonbar -->
+			</div>
+			<perch:success>
+				<p>Thank you for voting.</p>
+			</perch:success>
+		</perch:form>
+	</div>
+</section>

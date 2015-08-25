@@ -1,0 +1,17 @@
+<h1 id="day<perch:content id="date" type="date" format="Yd" />" class="chapter"><perch:content id="title" type="text" /></h1>
+<perch:related id="author" collection="Authors">
+    <p class="author"><a href="#<perch:content id="slug" />"><perch:content id="firstname" /> <perch:if exists="middlename"><perch:content id="middlename" /> </perch:if><perch:content id="lastname" /></a></p>
+</perch:related>
+<p class="url"><a href="http://24ways.org/<perch:content id="date" type="date" format="Yd" />">24ways.org/<perch:content id="date" type="date" format="Yd" /></a></p>
+
+<perch:if exists="deprecated"><perch:template path="partials/content/note.html" /></perch:if> 
+
+<perch:content id="article" type="magictextarea" textile="true" html="true" class="lede" />
+
+<perch:related id="author" collection="Authors">
+<div class="author-bio">
+    <h2 id="<perch:content id="slug" />">About the author</h2>
+    <span class="avatar"><img class="article_image u-photo" src="//cloud.24ways.org/authors/<perch:content id="slug" />280.jpg" alt="<perch:content id="firstname" /> <perch:content id="lastname" />" /></span>
+    <perch:content id="bio" html="true" />
+</div>
+</perch:related>

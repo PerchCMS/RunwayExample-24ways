@@ -1,0 +1,32 @@
+
+			<article class="summary summary-article h-entry day-<perch:content id="date" format="d" />">
+				<header class="summary_header">
+					<h1 class="summary_title p-name">
+						<a class="u-url" rel="bookmark" href="/<perch:content id="date" format="Y" />/<perch:content id="slug" />/"><perch:content id="title" /></a>
+					</h1>
+					<p class="summary_meta">
+						<perch:if exists="show_year">
+						<time class="dt-published" datetime="<perch:content id="date" format="c" />"><perch:content id="date" format="j M Y" /></time>
+						<perch:else />
+						<time class="dt-published" datetime="<perch:content id="date" format="c" />"><perch:content id="date" format="j" /> <abbr><perch:content id="date" format="M" /></abbr></time>
+
+						</perch:if>
+						<perch:if exists="comment_count">
+						<a class="summary_comments" href="/<perch:content id="date" format="Y" />/<perch:content id="slug" />/#comments"><perch:content id="comment_count" /> <perch:if id="comment_count" match="eq" value="1">comment<perch:else />comments</perch:if></a>
+						</perch:if>
+					</p>
+				</header>
+				<div class="summary_main">
+					<perch:content id="excerpt" type="textarea" label="Excerpt" textile="true" />
+					<a class="summary_link" href="/<perch:content id="date" format="Y" />/<perch:content id="slug" />/">
+						Impress your friends with &#8216;<perch:content id="title" />&#8217;
+					</a>
+				</div>
+				<footer class="summary_footer">
+					<p class="summary_author p-author h-card">
+						<perch:related id="author" collection="Authors">
+							<a class="u-url" href="/authors/<perch:content id="slug" />/"><img class="u-photo" src="//cloud.24ways.org/authors/<perch:content id="slug" />72.jpg" alt="" /><span class="p-name"><perch:content id="firstname" /> <perch:content id="lastname" /></span></a>
+						</perch:related>
+					</p>
+				</footer>
+			</article><!--/.summary-article-->

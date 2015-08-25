@@ -1,0 +1,22 @@
+<perch:before>
+<main class="main" role="main">
+	<article>
+		<header class="preface">
+			<h1 class="preface_title">Newsletter</h1>
+		</header><!--/.preface-->
+</perch:before>
+		<section class="section" id="<perch:content id="sectionID" type="text" required="true" label="Section ID" order="2" />">
+			<header class="section_header">
+				<h1 class="section_title"><perch:content id="title" type="text" required="true" label="Title" order="1" title="true" /></h1>
+			</header>
+			<div class="section_main">
+				<perch:content id="desc" type="magictextarea" label="Text" order="3" textile="true" html="true" class="lede" />
+			</div>
+		</section><!--/.section-->
+<perch:after>
+
+		<perch:content id="subscribe_form" encode="false" type="hidden" />
+
+	</article><!--/.article-->
+</main><!--/@main-->
+</perch:after>

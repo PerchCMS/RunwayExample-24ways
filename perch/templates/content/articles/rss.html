@@ -1,0 +1,39 @@
+<perch:before><?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>24 ways</title>
+		<link>http://24ways.org/</link>
+		<description>Web design and development articles and tutorials for advent.</description>
+		<language>en-gb</language>
+		<pubDate><perch:content id="today" format="D, d M Y h:i:s O" /></pubDate>
+		<lastBuildDate><perch:content id="today" format="D, d M Y h:i:s O" /></lastBuildDate>
+		<generator>Perch Runway http://grabaperch.com/</generator>
+		<atom:link href="http://24ways.org/rss/" rel="self" type="application/rss+xml" />
+</perch:before>
+		<item>
+			<title><perch:content id="title" /></title>
+		<perch:related id="author" collection="Authors">
+			<author>feeds@allinthehead.com (<perch:content id="firstname" /> <perch:content id="lastname" />)</author>
+		</perch:related>
+		<perch:categories id="categories" set="topics">
+			<category><perch:category id="catTitle" /></category>
+		</perch:categories>
+			<category><perch:content id="category" type="dataselect" /></category>
+			<link>http://24ways.org/<perch:content id="date" format="Y" />/<perch:content id="slug" />/</link>
+			<description><![CDATA[
+				<perch:content id="excerpt" type="textarea" label="Excerpt" textile="true" />
+
+				<perch:if id="sponsor" match="eq" value="shopify"><perch:template path="partials/content/rss.shopify.html" /></perch:if>
+				<perch:if id="sponsor" match="eq" value="treehouse"><perch:template path="partials/content/rss.treehouse.html" /></perch:if>
+				<perch:if id="sponsor" match="eq" value="gathercontent"><perch:template path="partials/content/rss.gathercontent.html" /></perch:if>
+				<perch:if id="sponsor" match="eq" value="wildbit"><perch:template path="partials/content/rss.wildbit.html" /></perch:if>
+				<perch:if id="sponsor" match="eq" value="wildbitb"><perch:template path="partials/content/rss.wildbitb.html" /></perch:if>
+				<perch:if id="sponsor" match="eq" value="helpspot"><perch:template path="partials/content/rss.helpspot.html" /></perch:if>
+
+			]]></description>
+			<pubDate><perch:content id="date" format="D, d M Y h:i:s O" /></pubDate>
+			<guid>http://24ways.org/<perch:content id="date" format="Y" />/<perch:content id="slug" />/</guid>
+		</item>
+<perch:after>
+	</channel>
+</rss></perch:after>

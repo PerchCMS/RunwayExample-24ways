@@ -1,0 +1,34 @@
+<perch:before>
+    <main class="main" role="main">
+        <section class="index">
+            <header class="preface">
+                <h1 class="preface_title">Authors</h1>
+            </header><!--/.preface-->
+</perch:before>
+<perch:if different="lastname" format="C:1" case="insensitive">
+
+	<perch:if exists="perch_item_first">
+	<perch:else />
+                    </ul><!--/.list-authors-->
+                </div>
+            </section><!--/.section-->
+	</perch:if>
+
+            <section class="section" id="<perch:content id="lastname" chars="1" format="LC" />">
+                <header class="section_header">
+                    <h1 class="section_title"><perch:content id="lastname" chars="1" format="UC" /></h1>
+                </header>
+                <div class="section_main">
+                    <ul class="list list-authors">
+</perch:if>
+                        <li class="list_item">
+                        	<perch:template path="partials/content/summary-author.html" />
+                        </li>
+
+<perch:after>
+                    </ul><!--/.list-authors-->
+                </div>
+            </section><!--/.section-->
+        </section><!--/.index-->
+    </main><!--/@main-->
+</perch:after>

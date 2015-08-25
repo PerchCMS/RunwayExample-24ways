@@ -1,0 +1,23 @@
+<li class="list_item">
+	<article class="summary summary-comment summary-helpful h-entry" id="c0<perch:comments id="commentID" />">
+		<header class="summary_header">
+			<h1 class="summary_title p-name h-card">
+				<a class="p-author u-url" <perch:if exists="commentURL">href="<perch:comments id="commentURL" type="url" label="URL" order="3" />"</perch:if>>
+					<span class="avatar"><img class="u-photo" src="//www.gravatar.com/avatar/<perch:comments id="commentEmail" type="email" label="Email" order="2" hash="md5" required="true" />?s=96&#38;d=https%3A%2F%2F24ways.org%2F_assets%2Fimages%2Fgravatar.png" width="64" height="64"/></span>
+					<perch:comments id="commentName" type="text" label="Name" order="1" required="true" />
+				</a>
+			</h1>
+			<p class="summary_meta">
+				<a rel="bookmark" href="___URL___#c0<perch:comments id="commentID" />" title="Permalink to this comment"><time class="dt-published" datetime="<perch:comments id="commentDateTime" format="c" type="date" time="true" label="Date" />"><perch:comments id="commentDateTime" format="d F Y" type="date" time="true" label="Date" /></time></a>
+			</p>
+		</header>
+		<div class="summary_main e-content">
+			<perch:comments id="commentHTML" encode="false" html="true" type="textarea" label="Message (HTML)" order="4" required="true" />
+		</div>
+		<footer class="summary_footer">
+			<p class="summary_vote">
+				This comment was <a href="/vote/up/c<perch:comments id="commentID" type="hidden" />/">helpful</a> / <a href="/vote/down/c<perch:comments id="commentID" type="hidden" />/">unhelpful</a>
+			</p>
+		</footer>
+	</article><!--/.summary-comment-->
+</li>
