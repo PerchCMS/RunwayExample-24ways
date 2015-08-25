@@ -10,5 +10,5 @@ This was a site that started out on Perch before being ported to Perch Runway. A
 
 24 ways is very much based around date filtering. It has states of the current year (controlling things like the home page view) and the current day (which dictates which articles to reveal). To facilitate this, a bunch of standard data for the page is set up in `page_config.php`, which is simply included in each page. It sets up the `$page_vars` array you see - this isn't part of the CMS, it's part of how things are strung together for this one site. 
 
-(Home page)[https://github.com/PerchCMS/RunwayExample-24ways/blob/master/perch/templates/pages/home.php]
-(Article page)[https://github.com/PerchCMS/RunwayExample-24ways/blob/master/perch/templates/pages/article.php]
+- [Home page](https://github.com/PerchCMS/RunwayExample-24ways/blob/master/perch/templates/pages/home.php)
+- [Article page](https://github.com/PerchCMS/RunwayExample-24ways/blob/master/perch/templates/pages/article.php)
